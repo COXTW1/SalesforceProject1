@@ -1,6 +1,6 @@
 @isTest
 private class P0BTest {
-
+/*
     @isTest
     public static void nFibonacciTest(){
         system.assertEquals(55, Project0B.nFibonacci(10));
@@ -89,5 +89,5 @@ private class P0BTest {
         List<Opportunity> newOpps = TestDataFactory.createOpportunity(10, Date.newInstance(2011, 1, 1), 'testOpp');
         insert newOpps;
     }
-    
+    */
 }
