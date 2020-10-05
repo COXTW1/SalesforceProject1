@@ -33,8 +33,14 @@
         <name>StaticResource</name>
     </types>
     <types>
+        <members>Address__c</members>
+        <members>Distribution_Center__c</members>
+        <members>Inhabitant__c</members>
         <members>Mail__c</members>
         <members>Route__c</members>
+        <members>Test_Object__c</members>
+        <members>Vehicle__c</members>
+        <members>Vehicle_Schedule__c</members>
         <name>CustomObject</name>
     </types>
     <version>49.0</version>
