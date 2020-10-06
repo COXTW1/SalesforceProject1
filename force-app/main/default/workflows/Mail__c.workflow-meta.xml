@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Claim_Payout_S</fullName>
+        <field>Claim_Paid_Out__c</field>
+        <literalValue>1</literalValue>
+        <name>Claim Payout S</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Insurance_Payout</fullName>
+        <field>Delivery_Status__c</field>
+        <literalValue>Missing - Paid Out</literalValue>
+        <name>Insurance Payout</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Insurance_Payout_L</fullName>
+        <field>Claim_Paid_Out__c</field>
+        <literalValue>1</literalValue>
+        <name>Insurance Payout Large</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Insurance_Payout_Large</fullName>
+        <field>Delivery_Status__c</field>
+        <literalValue>Missing - Paid Out</literalValue>
+        <name>Insurance Payout</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Insurance_Payout_Large_2</fullName>
+        <field>Claim_Paid_Out__c</field>
+        <literalValue>1</literalValue>
+        <name>Insurance Payout</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Insurance_Payout_Small</fullName>
+        <field>Claim_Paid_Out__c</field>
+        <literalValue>1</literalValue>
+        <name>Insurance Payout Small</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Payout</fullName>
+        <field>Claim_Paid_Out__c</field>
+        <literalValue>1</literalValue>
+        <name>Update Payout</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+</Workflow>
