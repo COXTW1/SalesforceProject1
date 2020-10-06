@@ -224,7 +224,7 @@ public class Project0B {
     /* Retrieves a list of all accounts and updates those accounts. */
     /****************************************************************/
     public static void updateAccountSize( ){
-        
+        /*
         // Select the fields needed for updating on Accounts.
         List<Account> accountList = [SELECT NumberOfEmployees, Size__c FROM Account];
         
@@ -240,7 +240,7 @@ public class Project0B {
         }
         
         // Push the update onto the database.
-        update accountList;
+        update accountList;*/
     }
     
     /******************************************/
