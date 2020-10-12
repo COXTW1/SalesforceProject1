@@ -223,8 +223,8 @@ public class Project0B {
     /****************************************************************/    
     /* Retrieves a list of all accounts and updates those accounts. */
     /****************************************************************/
-    public static void updateAccountSize( ){
-        /*
+    public static void updateAccountSize( ){/*
+        
         // Select the fields needed for updating on Accounts.
         List<Account> accountList = [SELECT NumberOfEmployees, Size__c FROM Account];
         
@@ -246,7 +246,7 @@ public class Project0B {
     /******************************************/
     /* Finds all Leads in CA and closes them. */
     /******************************************/
-    public static void updateCALeads( ){
+    public static void updateCALeads( ){/*
         
         // Get a list of all the leads in the database
         List<Lead> leads = [SELECT Address, Description, Status FROM Lead];
@@ -260,7 +260,7 @@ public class Project0B {
             }
         
         // Push the update onto the database.
-        update leads;
+        update leads;*/
     }
     
     /***************************************************************************************/
