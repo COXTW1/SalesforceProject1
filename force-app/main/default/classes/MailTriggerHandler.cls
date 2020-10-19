@@ -18,4 +18,19 @@ public class MailTriggerHandler {
         }
     }
 
+    public static void generateTrackingCode(List<Mail__c> mailList) {
+        String generatedCode = '';
+        Integer randomNumber;
+        
+        for(Mail__c mail : mailList){
+        	for(Integer x = 0; x < 5; x++){
+            	randomNumber = Integer.valueof((Math.random() * 99));
+            	if(randomNumber < 10){
+                	randomNumber += 15;
+            	}
+            	generatedCode += randomNumber;
+        	}
+            mail.Tracking__c = generatedCode;
+        }
+    }
 }

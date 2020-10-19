@@ -1,0 +1,57 @@
+<apex:page controller="DeliveryController">
+    <head>
+        <title>
+        	Delivered Packages
+        </title>
+    </head>
+    <style  type="text/css">
+        .delivTable{
+        	background-color: white;
+            width: 100%;
+            margin: 5px;
+        	padding: 5px;
+        }
+        .pageBlockTable{
+        	padding: 2px;
+        }
+        
+    	.col{
+            border-top: 1px outset LightGray;
+        	height: 30px;
+        	padding-left: 5px;
+        	padding-right: 5px;
+       	}
+        th{
+        padding: 5px;
+        }
+        tr:hover{
+        	background-color: LightBlue;
+        }
+        
+        
+    </style>
+
+       
+                <apex:dataTable styleClass="delivTable" value="{!deliveredMail}" var="a">
+                <apex:column styleClass="col">
+                	<apex:facet name="header" >Delivery Status</apex:facet>
+                    <apex:outputText value="{!a.Delivery_Status__c}"/>                    
+                </apex:column>
+                <apex:column styleClass="col">
+                	<apex:facet name="header">Package Info</apex:facet>
+                    <apex:outputText value="{!a.Name}"/>                    
+                </apex:column>
+                <apex:column styleClass="col">
+                	<apex:facet name="header">Delivery Address</apex:facet>
+                    <apex:outputText value="{!a.Address__c}"/>                    
+                </apex:column>
+                <apex:column styleClass="col">
+                	<apex:facet name="header">Tracking Info</apex:facet>
+                    <apex:outputText value="{!a.Tracking__c}"/>                    
+                </apex:column>
+     
+                </apex:dataTable>
+    
+
+  
+</apex:page>

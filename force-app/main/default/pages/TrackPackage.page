@@ -1,0 +1,45 @@
+<apex:page controller="TrackingController">
+    <head>
+        <title>
+            Track My Package
+        </title>
+    </head>
+    <style>
+        body{
+            background-color: #FFFFFF;
+            width: 90%;
+            margin: 5px;
+        }
+        .pageBlockTable{
+            padding: 2px;
+        }
+        .generalOne{
+            padding: 2px;
+        }
+        .col{
+            border-top: 1px outset LightGray;
+            height: 30px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    </style>
+    <apex:form >
+        <apex:pageBlock >
+            <apex:outputLabel styleClass="generalOne" for="nameInput" value="Please enter the tracking number for the package: "/>
+            <apex:inputText value="{!trackingNum}" id="trackingNum"/>
+            <br />
+            <apex:commandButton styleClass="generalOne" value="Find Package" action="{!returnMail}"/>
+            <br />
+            <apex:outputText styleClass="generalOne" value="{!errorMessage}"/>
+        </apex:pageBlock>
+    </apex:form>
+    
+    <apex:pageBlock >
+        <apex:pageBlockTable styleClass="pageBlockTable" value="{!mail}" var="a">
+            <apex:column styleClass="col" value="{!a.Delivery_Status__c}"/>
+            <apex:column styleClass="col" value="{!a.Name}"/>
+            <apex:column styleClass="col" value="{!a.Address__c}"/>
+            <apex:column styleClass="col" value="{!a.Tracking__c}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

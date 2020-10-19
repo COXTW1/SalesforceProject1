@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Insurance_Checker_2</fullName>
+    <active>true</active>
+    <description>Makes sure that you have insurance amount recorded if Insurance checkbox is checked.</description>
+    <errorConditionFormula>Insurance_check__c = TRUE &amp;&amp; ISNULL(Insurance__c)</errorConditionFormula>
+    <errorDisplayField>Insurance__c</errorDisplayField>
+    <errorMessage>Please enter an insurance amount.</errorMessage>
+</ValidationRule>

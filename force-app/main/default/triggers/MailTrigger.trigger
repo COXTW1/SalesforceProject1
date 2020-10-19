@@ -14,10 +14,10 @@ trigger MailTrigger on Mail__c (before insert, before update, before delete, aft
             
         }
         when BEFORE_DELETE {
-            MailTriggerHandler.CheckApprovalLock(Trigger.new);
+            //MailTriggerHandler.CheckApprovalLock(Trigger.new);
         }
         when BEFORE_INSERT {
-            
+            MailTriggerHandler.generateTrackingCode(Trigger.new);
         }
         when BEFORE_UPDATE {
            // MailTriggerHandler.CheckApprovalLock(Trigger.new);       

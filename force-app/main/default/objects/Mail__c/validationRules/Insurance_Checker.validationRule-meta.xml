@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Insurance_Checker</fullName>
+    <active>true</active>
+    <description>Makes sure that the user has insurance_check checked if they have insurance on the package.</description>
+    <errorConditionFormula>Insurance_check__c  = FALSE &amp;&amp;  Insurance__c &gt; 0</errorConditionFormula>
+    <errorDisplayField>Insurance_check__c</errorDisplayField>
+    <errorMessage>You need to check the insurance checkbox.</errorMessage>
+</ValidationRule>

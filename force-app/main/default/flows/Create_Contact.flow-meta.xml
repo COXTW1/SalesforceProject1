@@ -349,7 +349,7 @@
             <targetReference>Creating_a_Contact</targetReference>
         </connector>
     </start>
-    <status>Obsolete</status>
+    <status>Draft</status>
     <variables>
         <name>account</name>
         <dataType>SObject</dataType>

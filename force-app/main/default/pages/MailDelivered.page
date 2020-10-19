@@ -1,0 +1,70 @@
+<!--
+	Author: Taylor Cox
+	Date Created: 7/OCT/2020
+	Last Modified By: Taylor Cox
+	Date Last Modified: 7/OCT/2020
+	Purpose: To display a list of packages that have already been delivered
+-->
+<apex:page controller="mailCustomController">
+    <head>
+        <title>
+        	Delivered Packages
+        </title>
+    </head>
+    <style type="text/css">
+        th {
+        	padding-left: 5px;
+        	padding-right: 5px;
+        }
+       .outTable {
+        	background-color: #FFFAFA;
+            border: hidden;
+            width: 100%;
+            margin: 5px;
+        	padding: 10px;
+       }
+       .col{
+            border-top: 1px outset LightGray;
+        	height: 30px;
+       }
+        tr:hover{
+        	background-color: LightBlue;
+        }
+    </style>
+    
+	<apex:dataTable styleClass="outTable" value="{!mailDelivered}" var="m">
+        
+        <apex:column styleClass="col">
+            <apex:facet name="header">Delivery Status</apex:facet>            
+            <apex:outputText value="{!m.Delivery_Status__c}"/>
+            <apex:facet name="footer"></apex:facet>
+        </apex:column>
+		<apex:column styleClass="col">
+            <apex:facet name="header">Package Info</apex:facet>            
+            <apex:outputText value="{!m.Name}"/>
+            <apex:facet name="footer"></apex:facet>
+        </apex:column>        
+        <apex:column styleClass="col">
+            <apex:facet name="header">Delivery Address</apex:facet>            
+            <apex:outputText value="{!m.Address__c}"/>
+            <apex:facet name="footer"></apex:facet>
+        </apex:column>
+        <apex:column styleClass="col">
+            <apex:facet name="header">Tracking Number</apex:facet>            
+            <apex:outputText value="{!m.Tracking__c}"/>
+            <apex:facet name="footer"></apex:facet>
+        </apex:column>
+      
+    </apex:dataTable>
+    
+    <!--
+    <apex:pageBlock>
+        <apex:pageBlockTable value="{!mailDelivered}" var="m">
+            <apex:column value="{!m.Delivery_Status__c}"/>
+            <apex:column value="{!m.Name}"/>
+            <apex:column value="{!m.Address__c}"/>
+            <apex:column value="{!m.Tracking__c}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    -->
+</apex:page>
